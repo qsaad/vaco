@@ -8,6 +8,7 @@
         <p class="display-3 font-weight-bold">VACO</p>
         <p class="body-2 red--text text--darken-3">A free webapp to manage tasks for virtually anything</p>
           <v-btn color="indigo" to="signup">Sign up</v-btn>
+          <v-btn color="indigo" to="dashboard">Dashboard</v-btn>
       </v-col>
     </v-row>
   </div>
