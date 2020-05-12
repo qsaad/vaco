@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
+//import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 
 export default {
   mode: 'universal',
@@ -15,8 +15,12 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      //{ rel: 'stylesheet', href: '/css/uPlot.min.css' }
+    ],
+    script: [
+      //{ src: '/js/uPlot.iife.min.js', body: true}
+    ],
   },
   /*
   ** Customize the progress-bar color
@@ -38,6 +42,7 @@ export default {
   */
   buildModules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/moment',
   ],
   /*
   ** Nuxt.js modules
@@ -52,13 +57,9 @@ export default {
   */
   vuetify: {
     plugins :[
-      new VuetifyLoaderPlugin()
+      //new VuetifyLoaderPlugin(),
     ],
     customVariables: ['~/assets/variables.scss'],
-    defaultAssets :  {
-      font: { family: 'Roboto' },
-      icons: 'mdi'
-    },//DEFAULT ASSETS
     theme: {
       dark: true,
       themes: {
